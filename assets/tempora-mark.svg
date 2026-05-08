@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="temporaMarkTitle">
+  <title id="temporaMarkTitle">Simbolo de Témpora</title>
+  <defs>
+    <linearGradient id="temporaGold" x1="32%" x2="78%" y1="14%" y2="88%">
+      <stop offset="0%" stop-color="#e0bd7d" />
+      <stop offset="100%" stop-color="#c89242" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M52 22h116c0 34-8 56-34 79-8 7-13 12-13 18s5 11 13 18c26 23 34 45 34 79H52c0-34 8-56 34-79 8-7 13-12 13-18s-5-11-13-18C60 78 52 56 52 22Z"
+    fill="none"
+    stroke="#1f1b19"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="10"
+  />
+  <path
+    d="M72 192c5-18 18-30 38-38v-25c0-14 7-23 16-34 9-11 11-28 1-45 19 12 29 29 29 50 0 20-10 36-46 49 15 4 28 12 38 24 6 8 10 14 11 19H72Z"
+    fill="url(#temporaGold)"
+  />
+  <path
+    d="M116 62c14 16 16 31 8 43-4 6-9 11-14 17-6-6-11-11-14-17-8-12-6-27 8-43 4-4 8-10 12-18Z"
+    fill="url(#temporaGold)"
+  />
+  <path
+    d="M111 82c8 9 8 20-1 32-8-10-9-20-1-32 1-2 2-4 2-6Z"
+    fill="#faf4eb"
+  />
+</svg>

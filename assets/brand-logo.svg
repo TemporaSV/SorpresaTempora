@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="brandLogoTitle">
+  <title id="brandLogoTitle">Logotipo de la plantilla</title>
+  <defs>
+    <linearGradient id="brandLogoGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4dd4f" />
+      <stop offset="100%" stop-color="#e68632" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="96" rx="24" fill="#11151b" />
+  <g transform="translate(20 18)">
+    <rect width="60" height="60" rx="18" fill="url(#brandLogoGradient)" />
+    <path
+      d="M18 40c0-12.15 9.85-22 22-22 6.3 0 11.99 2.64 16 6.88L49.75 31A13.86 13.86 0 0 0 40 27c-7.18 0-13 5.82-13 13s5.82 13 13 13c4.55 0 8.54-2.34 10.86-5.88h-11.6v-8H62c.23 1.36.35 2.76.35 4.2 0 12.15-9.85 22-22 22S18 52.15 18 40Z"
+      fill="#11151b"
+    />
+    <text
+      x="82"
+      y="24"
+      fill="#f6f7fb"
+      font-family="Arial, sans-serif"
+      font-size="16"
+      letter-spacing="3"
+    >
+      PLANTILLA
+    </text>
+    <text
+      x="82"
+      y="54"
+      fill="#f6f7fb"
+      font-family="Arial, sans-serif"
+      font-size="28"
+      font-weight="700"
+    >
+      Tu Negocio
+    </text>
+  </g>
+</svg>

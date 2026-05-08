@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Registro de beneficio y experiencia de marca de Témpora, velas decorativas artesanales."
+    />
+    <title>Témpora | Registro de beneficio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=tempora01" />
+  </head>
+  <body data-page="claim">
+    <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
+      <div class="intro-grid"></div>
+      <div class="intro-beam intro-beam-left"></div>
+      <div class="intro-beam intro-beam-right"></div>
+      <div class="intro-content">
+        <img
+          class="intro-logo"
+          src="./assets/tempora-logo.png"
+          alt="Logotipo de Témpora"
+        />
+        <p class="intro-kicker" id="intro-kicker-text">Velas decorativas artesanales</p>
+        <h1 class="intro-title" id="intro-title-text">Tiempo de luz</h1>
+        <p class="intro-copy" id="intro-copy-text">Tiempo para ti.</p>
+        <button class="button button-primary intro-button" id="dismiss-intro-button" type="button">
+          Descubrir mi beneficio
+        </button>
+      </div>
+    </div>
+
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brandmark" href="#hero">
+        <img
+          class="brandmark-logo"
+          src="./assets/tempora-mark.svg"
+          alt="Simbolo de Témpora"
+          data-brand-logo
+        />
+        <div class="brandmark-copy">
+          <span class="brandmark-kicker">Velas artesanales</span>
+          <span class="brandmark-name" data-brand-name>Témpora</span>
+        </div>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <span class="eyebrow" id="hero-eyebrow-text">Coleccion artesanal</span>
+            <h1>
+              <span id="hero-title-prefix">Un detalle de luz</span>
+              <span id="hero-title-highlight">hecho con dedicacion</span>
+              para ti.
+            </h1>
+            <p class="hero-text" id="hero-body-text">
+              Valida la clave de tu QR y completa tu registro para reservar tu beneficio
+              exclusivo de Témpora.
+            </p>
+
+            <div class="offer-pills">
+              <span class="offer-pill" id="registration-deadline-pill"></span>
+              <span class="offer-pill offer-pill-alt" id="redemption-deadline-pill"></span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#claim-shell">Reservar mi beneficio</a>
+            </div>
+
+            <p class="hero-signature">
+              Velas decorativas hechas a mano para acompanar pausas, regalos y momentos con
+              intencion.
+            </p>
+          </div>
+
+          <div class="hero-stage reveal reveal-delay">
+            <div class="hero-stage-halo"></div>
+            <div class="spark-field" aria-hidden="true">
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+            </div>
+            <div class="crest-shell">
+              <img class="crest-logo" src="./assets/tempora-logo.png" alt="Logotipo de Témpora" />
+            </div>
+            <div class="hero-stage-note">
+              <span>Tiempo de luz</span>
+              <p>Productos artesanales creados con dedicacion y amor para iluminar lo cotidiano.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="claim-shell" id="claim-shell">
+        <div class="section-head">
+          <span class="eyebrow" id="offer-title-text">Detalle exclusivo Témpora</span>
+          <h2 id="claim-section-title">Vamos a confirmar tu codigo para preparar tu beneficio.</h2>
+        </div>
+
+        <div class="registration-closed-banner" id="registration-closed-banner" hidden>
+          <strong id="registration-closed-title">Proceso de registro para canjear beneficio.</strong>
+          <span id="registration-closed-copy"></span>
+        </div>
+
+        <div class="claim-layout">
+          <section class="panel panel-code">
+            <div class="panel-head">
+              <div>
+                <span class="panel-kicker">Paso 1</span>
+                <h3 id="code-validation-title">Valida tu QR</h3>
+              </div>
+              <span class="panel-pill" id="code-pill">Pendiente</span>
+            </div>
+
+            <div class="detected-code" id="detected-code" hidden>
+              <p>Clave detectada desde el QR:</p>
+              <strong id="detected-code-value"></strong>
+            </div>
+
+            <div class="status-banner" id="code-status" aria-live="polite"></div>
+          </section>
+
+          <div class="claim-panels">
+            <section class="panel panel-details" id="details-panel" hidden>
+              <div class="panel-head">
+                <div>
+                  <span class="panel-kicker">Paso 2</span>
+                  <h3 id="form-section-title">Completa tus datos</h3>
+                </div>
+                <span class="panel-pill panel-pill-muted" id="details-pill">Esperando validacion</span>
+              </div>
+
+              <div class="details-code-chip" id="details-code-chip" hidden>
+                <span>QR validado</span>
+                <strong id="details-code-value"></strong>
+              </div>
+
+              <form id="claim-form" class="stack-form" autocomplete="on" hidden>
+                <div class="field-grid">
+                  <label class="field">
+                    <span>Nombre</span>
+                    <input
+                      id="first-name"
+                      name="first_name"
+                      type="text"
+                      placeholder="Juan"
+                      autocomplete="given-name"
+                      required
+                    />
+                  </label>
+
+                  <label class="field">
+                    <span>Apellido</span>
+                    <input
+                      id="last-name"
+                      name="last_name"
+                      type="text"
+                      placeholder="Perez"
+                      autocomplete="family-name"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <div class="field-grid">
+                  <label class="field">
+                    <span id="participant-identifier-label">Documento</span>
+                    <input
+                      id="participant-identifier"
+                      name="participant_identifier"
+                      type="text"
+                      inputmode="text"
+                      placeholder="ABC-123456"
+                      required
+                    />
+                  </label>
+
+                  <label class="field">
+                    <span id="whatsapp-label">WhatsApp</span>
+                    <input
+                      id="whatsapp"
+                      name="whatsapp"
+                      type="tel"
+                      inputmode="numeric"
+                      maxlength="24"
+                      placeholder="1234-5678"
+                      autocomplete="tel"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <label class="field">
+                  <span>Correo electronico</span>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="cliente@correo.com"
+                    autocomplete="email"
+                    required
+                  />
+                </label>
+
+                <div class="terms-consent">
+                  <label class="checkline">
+                    <input id="terms-checkbox" type="checkbox" required />
+                    <span>Acepto los terminos y condiciones de T&eacute;mpora.</span>
+                  </label>
+                  <button
+                    class="text-link terms-preview-trigger"
+                    id="view-terms-button"
+                    type="button"
+                  >
+                    Ver terminos y condiciones
+                  </button>
+                </div>
+
+                <button class="button button-primary" id="claim-submit" type="submit" disabled>
+                  Confirmar mi registro
+                </button>
+              </form>
+
+              <div class="status-banner" id="claim-status" aria-live="polite"></div>
+            </section>
+
+            <section class="panel panel-success" id="registered-panel" hidden>
+              <div class="panel-head">
+                <div>
+                  <span class="panel-kicker">Registro completado</span>
+                  <h3 id="success-title">Tu beneficio T&eacute;mpora ya quedo reservado.</h3>
+                </div>
+                <span class="panel-pill panel-pill-success">Registrado</span>
+              </div>
+
+              <dl class="summary-grid" id="claim-summary"></dl>
+              <div class="status-banner" id="email-notification-status" aria-live="polite"></div>
+
+              <div class="success-actions">
+                <a class="button button-secondary" href="#terms-shell">Ver terminos</a>
+                <button class="button button-ghost" id="restart-flow-button" type="button">
+                  Registrar otro QR
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="terms-shell" id="terms-shell" hidden>
+        <div class="section-head">
+          <span class="eyebrow">Terminos y condiciones</span>
+          <h2 id="terms-section-title">Condiciones de tu beneficio T&eacute;mpora.</h2>
+        </div>
+
+        <article class="terms-card" id="terms-card">
+          <header class="terms-header">
+            <div class="terms-header-copy">
+              <img
+                class="terms-logo"
+                src="./assets/tempora-mark.svg"
+                alt="Simbolo de Témpora"
+                data-brand-logo
+              />
+              <div>
+                <p class="terms-brand" data-brand-name>Témpora</p>
+                <h3 id="terms-offer-title">Detalle exclusivo Témpora</h3>
+              </div>
+            </div>
+            <button class="button button-primary print-hide" id="print-terms-button" type="button">
+              Imprimir terminos
+            </button>
+          </header>
+
+          <div class="terms-personal-data" id="terms-personal-data"></div>
+
+          <ol class="terms-list" id="terms-list"></ol>
+        </article>
+      </section>
+
+      <div class="terms-modal" id="terms-modal" hidden aria-hidden="true">
+        <div class="terms-modal-backdrop" data-close-terms-modal="true"></div>
+        <div
+          class="terms-modal-dialog panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="terms-modal-title"
+        >
+          <div class="terms-modal-head">
+            <div>
+              <span class="panel-kicker">T&eacute;mpora</span>
+              <h3 id="terms-modal-title">Terminos y condiciones</h3>
+            </div>
+            <button
+              class="button button-ghost terms-modal-close"
+              id="close-terms-modal-button"
+              type="button"
+            >
+              Cerrar
+            </button>
+          </div>
+          <p class="panel-note" id="terms-modal-intro">
+            Revisa las condiciones antes de confirmar tu registro.
+          </p>
+          <ol class="terms-list terms-modal-list" id="terms-modal-list"></ol>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footer-note">T&eacute;mpora crea velas decorativas artesanales hechas con dedicacion y amor.</p>
+    </footer>
+
+    <script type="module" src="./app.js?v=tempora01"></script>
+  </body>
+</html>
