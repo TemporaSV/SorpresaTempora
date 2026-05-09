@@ -274,7 +274,7 @@ begin
     v_whatsapp_canonical,
     v_code_normalized,
     v_code.id,
-    encode(digest(v_dispatch_key, 'sha256'), 'hex')
+    encode(extensions.digest(v_dispatch_key, 'sha256'), 'hex')
   )
   returning *
   into v_claim;
